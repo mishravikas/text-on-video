@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>DEMO: Text overlay on HTML5 videos</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+
+<video autoplay style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="http://localhost:8000/base-video.mp4" type="video/mp4"> <source src="http://localhost:8000/base-video.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
+<!--
+  <video autoplay style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.mp4" type="video/mp4"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.oggtheora.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
+  -->
+
+
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="640px" height="480px" viewBox="0 0 320 240" enable-background="new 0 0 320 240" xml:space="preserve">
+<defs>
+<clipPath id="clipText1h">
+	<rect x="0" y="-8" width="179" height="0">
+		<animate begin="callBubbleA.begin-0.3s" dur="0.2s" fill="freeze" attributeName="height" values="0;11;"/>
+	</rect>
+</clipPath>
+<clipPath id="clipText1b">
+	<rect x="0" y="-8" width="0" height="13">
+		<animate begin="callBubbleA.begin+0.4s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+
+<clipPath id="clipText2">
+	<rect x="0" y="-8" width="0" height="26">
+		<animate begin="callBubbleA.begin+1.8s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+
+<clipPath id="clipText3">
+	<rect x="0" y="-8" width="0" height="39">
+		<animate begin="callBubbleA.begin+3.6s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+<clipPath id="clipText2h">
+	<rect x="-179" y="-8" width="179" height="0">
+		<animate begin="responseBubbleA.begin-0.3s" dur="0.2s" fill="freeze" attributeName="height" values="0;11;"/>
+	</rect>
+</clipPath>
+
+
+<clipPath id="clipText4">
+	<rect x="-150" y="-8" width="0" height="13">
+		<animate begin="responseBubbleA.begin+0.4s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+<clipPath id="clipText5">
+	<rect x="-150" y="-8" width="0" height="26">
+		<animate begin="responseBubbleA.begin+1.8s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+<clipPath id="clipText6">
+	<rect x="-150" y="-8" width="0" height="39">
+		<animate begin="responseBubbleA.begin+3.6s" dur="1.4s" fill="freeze" attributeName="width" values="0;179;"/>
+	</rect>
+</clipPath>
+<clipPath id="clipText3h">
+	<rect x="0" y="-8" width="179" height="0">
+		<animate begin="callBubbleC.begin-0.3s" dur="0.2s" fill="freeze" attributeName="height" values="0;11;"/>
+	</rect>
+</defs>
+
+<g id="callGroupA">
+<path id="callBubble" opacity="0.4" fill="#FFFFFF" d="M30,71   c0,0,0,0,0,0    h0   c0,0,0,0,0,0      c0,0,0,0,0,0     c0,0,0,0,0,0      v0   c0,0,0,0,0,0     h0    c0,0,0,0,0,0  V71z">
+	<animate id="callBubbleA" begin="5s" dur="5s" fill="freeze" attributeName="d"
+	
+	values="
+	M30,71   c0,0,0,0,0,0    h0   c0,0,0,0,0,0      c0,0,0,0,0,0     c0,0,0,0,0,0      v0   c0,0,0,0,0,0     h0    c0,0,0,0,0,0  V71z;
+
+	M179,42  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;
+	M179,42  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;
+
+	M179,56  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;
+	M179,56  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;
+
+	M179,69  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;
+	M179,69  c 0,6,0,9,-6,9  H43  c-1,0,-2,6,-12,6  c-1,0,2,-1,2,-4  c0,-3,0,-8,0,-11  V43  c0,-6,0,-9,6,-9  h134  c6,0,6,2,6,9  V56z;"/>
+</path>
+<text transform="matrix(1 0 0 1 41 30)" fill="#FFFFFF" font-family="'Helvetica'" font-size="7" style="clip-path:url(#clipText1h);">Message 1 (start: 5s))</text>
+<text transform="matrix(1 0 0 1 42 46)" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText1b);">Dear Mr. Mishra</text>
+<text transform="matrix(1 0 0 1 42 59)" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText2);">This is your personalized video</text>
+<text transform="matrix(1 0 0 1 42 72)" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText3);">-From HDFC Bank</text>
+<animate id="callGroupFadeout" begin="responseBubbleA.end+2.5s" dur="0.9s" fill="freeze" attributeName="opacity" from="1" to="0">
+</g>
+<g id="responseGroupA">
+<path id="responseBubble" opacity="0.5" fill="#489AB6" d="M291,120  c0-0,0-0-0-0  h-0   c0,0-0-0-0-0   c0,0,0,0,0,0  c0,0,0,0,0,0    v0    c0,0-0,0,0,0  h0    c0,0,0-0,0-0 V120z">
+	<animate id="responseBubbleA" begin="15s" dur="5s" fill="freeze" attributeName="d"
+	values="
+	M291,135  c0-0,0-0-0-0  h-0   c0,0-0-0-0-0   c0,0,0,0,0,0  c0,0,0,0,0,0    v0    c0,0-0,0,0,0  h0    c0,0,0-0,0-0 V120z;
+
+	M140,119  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v0    c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V104z;
+	M140,119  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v0    c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V104z;
+
+	M140,133  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v-14  c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V118z;
+	M140,133  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v-14  c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V118z;
+
+	M140,147  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v-28  c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V132z;
+	M140,147  c0,6-0,9,6,9  h130  c1,0,2,6,12,6  c1-0-2-1-2-4  c-0-3,0-8,0-11  v-28  c0-6,0-9-6-9  H146  c-6,0-6,2-6,9V132z;"/>
+</path>
+<text transform="matrix(1 0 0 1 278 105)" text-anchor="end" fill="#FFFFFF" font-family="'Helvetica'" font-size="7" style="clip-path: url(#clipText2h);">Message 2 (start: 15s))</text>
+<text transform="matrix(1 0 0 1 280 123)" text-anchor="end" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText4);">Mr. Mishra</text>
+<text transform="matrix(1 0 0 1 280 136)" text-anchor="end" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText5);">Your Acc. balance: xxxx INR</text>
+<text transform="matrix(1 0 0 1 280 149)" text-anchor="end" fill="#FFFFFF" font-family="'Helvetica'" font-size="10"  style="clip-path:url(#clipText6);">End of message</text>
+<animate id="responseGroupFadeout" begin="responseBubbleA.end+2.5s" dur="0.9s" fill="freeze" attributeName="opacity" from="1" to="0">
+</g>
+
+</svg>
+  
+  
+
+</body>
+
+</html>
