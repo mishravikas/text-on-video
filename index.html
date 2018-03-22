@@ -8,16 +8,31 @@
   
   
       <link rel="stylesheet" href="css/style.css">
+<script type="text/javascript">
+	function sync(){
+		video = document.getElementById("myvideo");
+		svg = document.getElementById("Layer_1");
+		if(video.paused){
+			video.play();
+			svg.unpauseAnimations();
 
+		} else {
+			video.pause();
+			svg.pauseAnimations();
+		}
+	}
+</script>
   
 </head>
 
 <body>
-
-<video autoplay style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="http://localhost:8000/base-video.mp4" type="video/mp4"> <source src="http://localhost:8000/base-video.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
 <!--
-  <video autoplay style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.mp4" type="video/mp4"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.oggtheora.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
-  -->
+<video autoplay style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="http://localhost:8000/base-video.mp4" type="video/mp4"> <source src="http://localhost:8000/base-video.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
+-->
+<div>
+  <video autoplay id="myvideo" style="position:absolute;top:0px;left:0px;z-index:-100"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.mp4" type="video/mp4"> <source src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/154557/oregon6.oggtheora.ogv" type='video/ogg; codecs="theora, vorbis"'> </video>
+  </div>
+  <button id="play" onclick="sync()">Play/Pause</button>
 
 
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
